@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Happy Birthday My Love 💕</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+<!-- Website Lock Screen -->
+<div class="lock-screen" id="lockScreen">
+    <div class="lock-card">
+        <h2>🔒 Private Access</h2>
+        <p>Only Rakshitha can open this 💖</p>
+        <input type="password" id="pinInput" maxlength="4" placeholder="Enter 4-digit PIN">
+        <button onclick="unlockSite()">Unlock 💝</button>
+        <span class="lock-error" id="lockError">Wrong PIN 😢</span>
+    </div>
+</div>
+
+<!-- Background Music -->
+<audio id="bgMusic" src="music.mp3" loop></audio>
+    <!-- Floating Background Particles -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <h1 class="typewriter" id="typewriter">Happy Birthday, Rakshitha! 💕</h1>
+            <p class="subtitle fade-in">Today is all about celebrating you and the joy you bring to my life</p>
+            <div class="floating-hearts">
+                <div class="heart">❤️</div>
+                <div class="heart">💖</div>
+                <div class="heart">💕</div>
+                <div class="heart">💗</div>
+                <div class="heart">❤️</div>
+            </div>
+            <button class="cta-button" onclick="scrollToSection('gallery')">
+                Start the Celebration 🎉
+            </button>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+
+
+    <!-- Photo Gallery Section -->
+    <section class="gallery-section" id="gallery">
+        <div class="container">
+            <h2 class="section-title">Our Beautiful Memories</h2>
+            <div class="gallery-grid">
+                <div class="photo-card" data-aos="fade-up" data-delay="100">
+                    <div class="photo-container">
+                        <img src="both.jpeg" alt="Our cherished memory">
+                        <div class="photo-overlay">
+                            <div class="photo-caption">Our cherished memory together</div>
+                            <button class="like-btn" onclick="toggleLike(this)">
+                                <span class="heart-icon">🤍</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="photo-card" data-aos="fade-up" data-delay="200">
+                    <div class="photo-container">
+                        <img src="both_1.jpeg" alt="Our cherished memory">
+                        <div class="photo-overlay">
+                            <div class="photo-caption">Another beautiful moment with you</div>
+                            <button class="like-btn" onclick="toggleLike(this)">
+                                <span class="heart-icon">🤍</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="photo-card" data-aos="fade-up" data-delay="300">
+                    <div class="photo-container">
+                        <img src="both_2.jpeg" alt="Our cherished memory">
+                        <div class="photo-overlay">
+                            <div class="photo-caption">Making memories, just us</div>
+                            <button class="like-btn" onclick="toggleLike(this)">
+                                <span class="heart-icon">🤍</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="photo-card" data-aos="fade-up" data-delay="400">
+                    <div class="photo-container">
+                        <img src="both_3.jpeg" alt="Our cherished memory">
+                        <div class="photo-overlay">
+                            <div class="photo-caption">Every moment with you is special</div>
+                            <button class="like-btn" onclick="toggleLike(this)">
+                                <span class="heart-icon">🤍</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="photo-card" data-aos="fade-up" data-delay="500">
+                    <div class="photo-container">
+                        <img src="both_4.jpeg" alt="Our cherished memory">
+                        <div class="photo-overlay">
+                            <div class="photo-caption">Our journey together</div>
+                            <button class="like-btn" onclick="toggleLike(this)">
+                                <span class="heart-icon">🤍</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="photo-card" data-aos="fade-up" data-delay="600">
+                    <div class="photo-container">
+                        <img src="both_5.jpeg" alt="Our cherished memory">
+                        <div class="photo-overlay">
+                            <div class="photo-caption">Adventures with my love</div>
+                            <button class="like-btn" onclick="toggleLike(this)">
+                                <span class="heart-icon">🤍</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="photo-card" data-aos="fade-up" data-delay="700">
+                    <div class="photo-container">
+                        <img src="both_6.jpeg" alt="Our cherished memory">
+                        <div class="photo-overlay">
+                            <div class="photo-caption">Sweet times, sweet memories</div>
+                            <button class="like-btn" onclick="toggleLike(this)">
+                                <span class="heart-icon">🤍</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="photo-card" data-aos="fade-up" data-delay="800">
+                    <div class="photo-container">
+                        <img src="both_7.jpeg" alt="Our cherished memory">
+                        <div class="photo-overlay">
+                            <div class="photo-caption">You and me, always</div>
+                            <button class="like-btn" onclick="toggleLike(this)">
+                                <span class="heart-icon">🤍</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="photo-card" data-aos="fade-up" data-delay="900">
+                    <div class="photo-container">
+                        <img src="both_8.jpeg" alt="Our cherished memory">
+                        <div class="photo-overlay">
+                            <div class="photo-caption">Our happy place</div>
+                            <button class="like-btn" onclick="toggleLike(this)">
+                                <span class="heart-icon">🤍</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="photo-card" data-aos="fade-up" data-delay="1000">
+                    <div class="photo-container">
+                        <img src="both_9.jpeg" alt="Our cherished memory">
+                        <div class="photo-overlay">
+                            <div class="photo-caption">Love in every frame</div>
+                            <button class="like-btn" onclick="toggleLike(this)">
+                                <span class="heart-icon">🤍</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="photo-card" data-aos="fade-up" data-delay="1100">
+                    <div class="photo-container">
+                        <img src="both_10.jpeg" alt="Our cherished memory">
+                        <div class="photo-overlay">
+                            <div class="photo-caption">Growing together</div>
+                            <button class="like-btn" onclick="toggleLike(this)">
+                                <span class="heart-icon">🤍</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="photo-card" data-aos="fade-up" data-delay="1200">
+                    <div class="photo-container">
+                        <img src="both_11.jpeg" alt="Our cherished memory">
+                        <div class="photo-overlay">
+                            <div class="photo-caption">Unforgettable moments</div>
+                            <button class="like-btn" onclick="toggleLike(this)">
+                                <span class="heart-icon">🤍</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="photo-card" data-aos="fade-up" data-delay="1300">
+                    <div class="photo-container">
+                        <img src="both_12.jpeg" alt="Our cherished memory">
+                        <div class="photo-overlay">
+                            <div class="photo-caption">Our bond, strong and true</div>
+                            <button class="like-btn" onclick="toggleLike(this)">
+                                <span class="heart-icon">🤍</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="photo-card" data-aos="fade-up" data-delay="1400">
+                    <div class="photo-container">
+                        <img src="Rakshi.jpeg" alt="Our cherished memory">
+                        <div class="photo-overlay">
+                            <div class="photo-caption">My beautiful Rakshitha</div>
+                            <button class="like-btn" onclick="toggleLike(this)">
+                                <span class="heart-icon">🤍</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="photo-card" data-aos="fade-up" data-delay="1500">
+                    <div class="photo-container">
+                        <img src="Rakshi_1.jpeg" alt="Our cherished memory">
+                        <div class="photo-overlay">
+                            <div class="photo-caption">Your smile brightens my day</div>
+                            <button class="like-btn" onclick="toggleLike(this)">
+                                <span class="heart-icon">🤍</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="photo-card" data-aos="fade-up" data-delay="1600">
+                    <div class="photo-container">
+                        <img src="Rakshi_2.jpeg" alt="Our cherished memory">
+                        <div class="photo-overlay">
+                            <div class="photo-caption">Simply stunning</div>
+                            <button class="like-btn" onclick="toggleLike(this)">
+                                <span class="heart-icon">🤍</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="photo-card" data-aos="fade-up" data-delay="1700">
+                    <div class="photo-container">
+                        <img src="Rakshi_3.jpeg" alt="Our cherished memory">
+                        <div class="photo-overlay">
+                            <div class="photo-caption">Capturing your grace</div>
+                            <button class="like-btn" onclick="toggleLike(this)">
+                                <span class="heart-icon">🤍</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="photo-card" data-aos="fade-up" data-delay="1800">
+                    <div class="photo-container">
+                        <img src="Rakshi_4.jpeg" alt="Our cherished memory">
+                        <div class="photo-overlay">
+                            <div class="photo-caption">My lovely girl</div>
+                            <button class="like-btn" onclick="toggleLike(this)">
+                                <span class="heart-icon">🤍</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="photo-card" data-aos="fade-up" data-delay="1900">
+                    <div class="photo-container">
+                        <img src="Rakshi_5.jpeg" alt="Our cherished memory">
+                        <div class="photo-overlay">
+                            <div class="photo-caption">A moment with you</div>
+                            <button class="like-btn" onclick="toggleLike(this)">
+                                <span class="heart-icon">🤍</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="photo-card" data-aos="fade-up" data-delay="2000">
+                    <div class="photo-container">
+                        <img src="Rakshi_6.jpeg" alt="Our cherished memory">
+                        <div class="photo-overlay">
+                            <div class="photo-caption">Your charm, always</div>
+                            <button class="like-btn" onclick="toggleLike(this)">
+                                <span class="heart-icon">🤍</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="photo-card" data-aos="fade-up" data-delay="2100">
+                    <div class="photo-container">
+                        <img src="Rakshi_7.jpeg" alt="Our cherished memory">
+                        <div class="photo-overlay">
+                            <div class="photo-caption">Radiant as ever</div>
+                            <button class="like-btn" onclick="toggleLike(this)">
+                                <span class="heart-icon">🤍</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="photo-card" data-aos="fade-up" data-delay="2200">
+                    <div class="photo-container">
+                        <img src="Rakshi_8.jpeg" alt="Our cherished memory">
+                        <div class="photo-overlay">
+                            <div class="photo-caption">Precious you</div>
+                            <button class="like-btn" onclick="toggleLike(this)">
+                                <span class="heart-icon">🤍</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="photo-card" data-aos="fade-up" data-delay="2300">
+                    <div class="photo-container">
+                        <img src="Rakshi_9.jpeg" alt="Our cherished memory">
+                        <div class="photo-overlay">
+                            <div class="photo-caption">Lost in your eyes</div>
+                            <button class="like-btn" onclick="toggleLike(this)">
+                                <span class="heart-icon">🤍</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="photo-card" data-aos="fade-up" data-delay="2400">
+                    <div class="photo-container">
+                        <img src="Rakshi_10.jpeg" alt="Our cherished memory">
+                        <div class="photo-overlay">
+                            <div class="photo-caption">My heart's delight</div>
+                            <button class="like-btn" onclick="toggleLike(this)">
+                                <span class="heart-icon">🤍</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="photo-card" data-aos="fade-up" data-delay="2500">
+                    <div class="photo-container">
+                        <img src="Rakshi_11.jpeg" alt="Our cherished memory">
+                        <div class="photo-overlay">
+                            <div class="photo-caption">Elegance personified</div>
+                            <button class="like-btn" onclick="toggleLike(this)">
+                                <span class="heart-icon">🤍</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="photo-card" data-aos="fade-up" data-delay="2600">
+                    <div class="photo-container">
+                        <img src="Rakshi_12.jpeg" alt="Our cherished memory">
+                        <div class="photo-overlay">
+                            <div class="photo-caption">Forever my muse</div>
+                            <button class="like-btn" onclick="toggleLike(this)">
+                                <span class="heart-icon">🤍</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="photo-card" data-aos="fade-up" data-delay="2700">
+                    <div class="photo-container">
+                        <img src="Rakshi_13.jpeg" alt="Our cherished memory">
+                        <div class="photo-overlay">
+                            <div class="photo-caption">The one I adore</div>
+                            <button class="like-btn" onclick="toggleLike(this)">
+                                <span class="heart-icon">🤍</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="photo-card" data-aos="fade-up" data-delay="2800">
+                    <div class="photo-container">
+                        <img src="friends.jpeg" alt="Our cherished memory">
+                        <div class="photo-overlay">
+                            <div class="photo-caption">Fun times with our amazing friends</div>
+                            <button class="like-btn" onclick="toggleLike(this)">
+                                <span class="heart-icon">🤍</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="photo-card" data-aos="fade-up" data-delay="2900">
+                    <div class="photo-container">
+                        <img src="friends_1.jpeg" alt="Our cherished memory">
+                        <div class="photo-overlay">
+                            <div class="photo-caption">Cherished moments with our beloved friends</div>
+                            <button class="like-btn" onclick="toggleLike(this)">
+                                <span class="heart-icon">🤍</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="photo-card" data-aos="fade-up" data-delay="3000">
+                    <div class="photo-container">
+                        <img src="child.jpeg" alt="Our cherished memory">
+                        <div class="photo-overlay">
+                            <div class="photo-caption">The innocence and joy of childhood</div>
+                            <button class="like-btn" onclick="toggleLike(this)">
+                                <span class="heart-icon">🤍</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="photo-card" data-aos="fade-up" data-delay="3100">
+                    <div class="photo-container">
+                        <img src="child_1.jpeg" alt="Our cherished memory">
+                        <div class="photo-overlay">
+                            <div class="photo-caption">Sweet memories from childhood days</div>
+                            <button class="like-btn" onclick="toggleLike(this)">
+                                <span class="heart-icon">🤍</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="photo-card" data-aos="fade-up" data-delay="3200">
+                    <div class="photo-container">
+                        <img src="child_2.jpeg" alt="Our cherished memory">
+                        <div class="photo-overlay">
+                            <div class="photo-caption">Little one's big steps</div>
+                            <button class="like-btn" onclick="toggleLike(this)">
+                                <span class="heart-icon">🤍</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="photo-card" data-aos="fade-up" data-delay="3300">
+                    <div class="photo-container">
+                        <img src="child_3.jpeg" alt="Our cherished memory">
+                        <div class="photo-overlay">
+                            <div class="photo-caption">Cherished childhood moments</div>
+                            <button class="like-btn" onclick="toggleLike(this)">
+                                <span class="heart-icon">🤍</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="photo-card" data-aos="fade-up" data-delay="3400">
+                    <div class="photo-container">
+                        <img src="child_4.jpeg" alt="Our cherished memory">
+                        <div class="photo-overlay">
+                            <div class="photo-caption">Pure happiness in their eyes</div>
+                            <button class="like-btn" onclick="toggleLike(this)">
+                                <span class="heart-icon">🤍</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="photo-card" data-aos="fade-up" data-delay="3500">
+                    <div class="photo-container">
+                        <img src="family.jpeg" alt="Our cherished memory">
+                        <div class="photo-overlay">
+                            <div class="photo-caption">Our loving family moments</div>
+                            <button class="like-btn" onclick="toggleLike(this)">
+                                <span class="heart-icon">🤍</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="photo-card" data-aos="fade-up" data-delay="3600">
+                    <div class="photo-container">
+                        <video muted loop playsinline preload="metadata" disablepictureinpicture>
+                            <source src="family_1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="photo-overlay">
+                            <div class="photo-caption">Our cherished memories in motion</div>
+                            <button class="like-btn" onclick="toggleLike(this)">
+                                <span class="heart-icon">🤍</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="photo-card" data-aos="fade-up" data-delay="3700">
+                    <div class="photo-container">
+                        <video muted loop playsinline preload="metadata" disablepictureinpicture>
+                            <source src="both_14.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="photo-overlay">
+                            <div class="photo-caption">Our special moments captured</div>
+                            <button class="like-btn" onclick="toggleLike(this)">
+                                <span class="heart-icon">🤍</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="photo-card" data-aos="fade-up" data-delay="3800">
+                    <div class="photo-container">
+                        <video muted loop playsinline preload="metadata" disablepictureinpicture>
+                            <source src="both_15.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="photo-overlay">
+                            <div class="photo-caption">Our beautiful journey in motion</div>
+                            <button class="like-btn" onclick="toggleLike(this)">
+                                <span class="heart-icon">🤍</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="photo-card" data-aos="fade-up" data-delay="3900">
+                    <div class="photo-container">
+                        <video muted loop playsinline preload="metadata" disablepictureinpicture>
+                            <source src="special_1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="photo-overlay">
+                            <div class="photo-caption">A truly special memory, just for us</div>
+                            <button class="like-btn" onclick="toggleLike(this)">
+                                <span class="heart-icon">🤍</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="photo-card" data-aos="fade-up" data-delay="4000">
+                    <div class="photo-container">
+                        <video muted loop playsinline preload="metadata" disablepictureinpicture>
+                            <source src="special_2.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="photo-overlay">
+                            <div class="photo-caption">More special moments with my love</div>
+                            <button class="like-btn" onclick="toggleLike(this)">
+                                <span class="heart-icon">🤍</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Happy Birthday Message Section -->
+
+
+    <!-- Special Video Message Section -->
+    <section class="video-message-section" id="special-video">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">A Special Video Message for You</h2>
+            <div class="video-wrapper"> <!-- New wrapper for video and stickers -->
+                <img src="sticker_1.png" alt="Sticker 1" class="video-sticker left-sticker" data-aos="fade-right" data-aos-delay="300">
+                <div class="custom-video-wrapper" data-aos="fade-up" data-aos-delay="200">
+                    <video controls playsinline id="specialVideo">
+                        <source data-src="special.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="custom-play-btn" id="customPlayBtn">▶️</div>
+                </div>
+                <img src="sticker_2.png" alt="Sticker 2" class="video-sticker right-sticker" data-aos="fade-left" data-aos-delay="300">
+            </div>
+        </div>
+    </section>
+
+    <!-- Birthday Message Section -->
+    <section class="message-section" id="message">
+        <div class="container">
+            <div class="message-card">
+                <h2 class="message-title">A Special Message for You</h2>
+                <div class="message-content">
+                    <p class="message-text fade-in-text" id="birthdayMessage">
+                        For the past 4 years, you have been the most precious part of my life. We’ve laughed together, cried together, fought a thousand times, and loved each other even more than that. No matter how many misunderstandings or tough moments we faced, you never gave up on me. Even when I couldn’t talk to you or didn’t show my feelings properly, you still stood by me with love, patience, and trust. And that means everything to me.
+                    </p>
+                    <p class="message-text fade-in-text">
+                        You are not just my girlfriend — you are my happiness, my peace, my strength, and the reason my life feels complete. You changed me entirely and made me a better person just by being in my life. Every smile of yours makes my world brighter, and every moment with you feels special and unforgettable.
+                    </p>
+                    <p class="message-text fade-in-text">
+                        I love you more than I love myself, and I promise I will always work hard to keep you happy, to protect you, to support you, and to stand beside you in every situation — good or bad, now and in the future. Your happiness will always be my biggest priority.
+                    </p>
+                    <p class="message-text fade-in-text">
+                        Thank you for loving me, believing in me, and choosing me again and again. You are my cute, sweet little piggy 🐷💗 and the love of my life forever.
+                    </p>
+                    <p class="message-signature fade-in-text">
+                        I will love you today, tomorrow, and till the very last moment of my life. Happy Birthday, my princess Rakshitha ❤️✨
+                    </p>
+                </div>
+                <div class="message-hearts">
+                    <span class="heart-animation">💖</span>
+                    <span class="heart-animation">💕</span>
+                    <span class="heart-animation">💗</span>
+                </div>
+                <button class="cta-button" id="celebrateButton">
+                    Let's Celebrate! 🎉
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    <!-- Cake Cutting Section -->
+    <section class="cake-section" id="cake-cutting">
+            <div class="container">
+                <h2 class="section-title">Cake Cutting Fun! 🎂</h2>
+
+                <div class="cake-area">
+
+                    <!-- LEFT STICKERS -->
+                    <img src="sticker_3.png" class="cake-sticker left-sticker s1">
+                    <img src="sticker_4.png" class="cake-sticker left-sticker s2">
+
+                    <!-- CAKE -->
+                    <div class="cake-wrapper" onclick="cutCake()">
+                        <div class="cake-half left-half"></div>
+                        <div class="cake-half right-half"></div>
+                    </div>
+
+                    <!-- RIGHT STICKERS -->
+                    <img src="sticker_5.png" class="cake-sticker right-sticker s3">
+                    <img src="sticker_6.png" class="cake-sticker right-sticker s4">
+
+                </div>
+
+                <p class="cake-hint">Tap the cake to cut it 💖</p>
+            </div>
+        </section>
+
+    <!-- Birthday Popup -->
+    <div class="birthday-popup" id="birthdayPopup">
+        <div class="popup-card">
+            <h2>🎂 Happy Birthday Pandi 💖</h2>
+            <p>You are my life, my happiness, and my forever ❤️</p>
+            <button onclick="closePopup()">Love You 😘</button>
+        </div>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
